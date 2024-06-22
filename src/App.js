@@ -1,44 +1,46 @@
 
 import './App.css';
-import { useState } from 'react';
+// import { useState } from 'react';
+import New from './New';
 function App() {
-  const [inputvalue, setinputvalue] = useState('')
-  const [inputvalue1, setinputvalue1] = useState('')
-  const [inputvalue2, setinputvalue2] = useState('')
-  const [inputvalue3, setinputvalue3] = useState('')
-  const [text, settext] = useState([])
-  let addData = () => {
-    let data = { inputvalue, inputvalue1, inputvalue2, inputvalue3 }
-    settext([...text, data])
-    setinputvalue('')
-    setinputvalue1('');
-    setinputvalue2('');
-    setinputvalue3('');
-  }
-  let deleteData = (i) => {
-    const amit = [...text]
-    amit.splice(i, 1)
-    settext(amit)
+  // const [inputvalue, setinputvalue] = useState('')
+  // const [inputvalue1, setinputvalue1] = useState('')
+  // const [inputvalue2, setinputvalue2] = useState('')
+  // const [inputvalue3, setinputvalue3] = useState('')
+  // const [text, settext] = useState([])
+  // let addData = () => {
+  //   let data = { inputvalue, inputvalue1, inputvalue2, inputvalue3 }
+  //   settext([...text, data])
+  //   setinputvalue('')
+  //   setinputvalue1('');
+  //   setinputvalue2('');
+  //   setinputvalue3('');
+  // }
+  // let deleteData = (i) => {
+  //   const amit = [...text]
+  //   amit.splice(i, 1)
+  //   settext(amit)
 
-  }
-  const updateData = (i,el) => {
-    const data3={
-      inputvalue,inputvalue1,inputvalue2,inputvalue3
-    }
-    const data2=[...text]
-    data2[i]=data3
+  // }
+  // const updateData = (i,el) => {
+  //   const data3={
+  //     inputvalue,inputvalue1,inputvalue2,inputvalue3
+  //   }
+  //   const data2=[...text]
+  //   data2[i]=data3
 
-    settext(data3)
-    setinputvalue('')
-    setinputvalue1('');
-    setinputvalue2('');
-    setinputvalue3('');
+  //   settext(data2)
+  //   setinputvalue('')
+  //   setinputvalue1('');
+  //   setinputvalue2('');
+  //   setinputvalue3('');
     
-  }
+  // }
 
 
   return (
     <div className="App">
+     {/* <center>
       <input type="text"
         value={inputvalue}
         onChange={(p) => setinputvalue(p.target.value)}
@@ -58,9 +60,11 @@ function App() {
         value={inputvalue3}
         onChange={(p) => setinputvalue3(p.target.value)}
         placeholder='Subject-3' />
+      
 
       <button onClick={addData}>click</button>
-      <center>
+
+      
         <table border={1} width='50%'>
           <tr>
             <th>Name</th>
@@ -101,7 +105,8 @@ function App() {
             })
           }
         </table>
-      </center>
+      </center> */}
+      <New></New>
     </div>
   );
 }
